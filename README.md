@@ -1,6 +1,6 @@
 # DocForge
 
-DocForge is an open-source, extensible document conversion and manipulation platform designed as a modular monolith. Built with TypeScript, React, Node.js, and an underlying conversion engine, DocForge provides reliable and privacy-focused document transformations.
+DocForge is an open-source, extensible document conversion and manipulation platform designed as a modular monolith. Built with TypeScript, React, Node.js, and an underlying conversion engine, DocForge provides reliable, self-hostable, and privacy-focused document transformations.
 
 ---
 
@@ -20,6 +20,44 @@ DocForge is architected from day one to scale beyond presentation conversion int
   - PDF Merge (combining multiple PDF documents)
   - PDF Split (extracting specific pages or ranges)
   - PDF Compress (optimizing document size)
+
+---
+
+## Documentation Index
+
+Comprehensive documentation is maintained as living project state:
+
+- **Product & Scope**:
+  - [Product Requirements Document (PRD)](docs/product/PRD.md)
+- **Technical Specifications**:
+  - [Technical Specification](specs/technical-specification.md)
+- **Phase Milestones & Roadmaps**:
+  - [Phase Directory (00 through 15)](docs/phases/)
+  - [Phase 00 — Foundation](docs/phases/00-foundation.md)
+  - [Phase 01 — Conversion Core](docs/phases/01-conversion-core.md)
+  - [Phase 02 — PPT/PPTX to PDF](docs/phases/02-ppt-pdf.md)
+  - [Phase 03 — Backend API](docs/phases/03-backend-api.md)
+  - [Phase 04 — Frontend MVP](docs/phases/04-frontend-mvp.md)
+  - [Phase 05 — Job Lifecycle](docs/phases/05-job-lifecycle.md)
+  - [Phase 06 — Batch Conversion](docs/phases/06-batch-conversion.md)
+  - [Phase 07 — Office Document Support](docs/phases/07-office-document-support.md)
+  - [Phase 08 — PDF Tools](docs/phases/08-pdf-tools.md)
+  - [Phase 09 — Reliability](docs/phases/09-reliability.md)
+  - [Phase 10 — Compatibility](docs/phases/10-compatibility.md)
+  - [Phase 11 — Security](docs/phases/11-security.md)
+  - [Phase 12 — Testing](docs/phases/12-testing.md)
+  - [Phase 13 — Docker](docs/phases/13-docker.md)
+  - [Phase 14 — CI/CD](docs/phases/14-ci-cd.md)
+  - [Phase 15 — Production](docs/phases/15-production.md)
+- **Supporting Documentation**:
+  - [Architecture Overview](docs/architecture/README.md)
+  - [API Contracts](docs/api/README.md)
+  - [Testing Guidelines](docs/testing/README.md)
+  - [Architectural Decision Records (ADRs)](docs/decisions/README.md)
+- **AI Guidelines & Institutional Memory**:
+  - [Engineering Agent Contract](ai/Agents.md)
+  - [Durable Project Memory](ai/Memory.md)
+  - [Engineering Lessons Log](ai/Mistakes.md)
 
 ---
 
@@ -82,10 +120,10 @@ docforge/
 
 ## Current Project Status
 
-- **Phase 00.1 — Repository Initialization**: **COMPLETED**
-  - Standard monorepo directory hierarchy established.
-  - Baseline `.gitignore`, `.env.example`, `LICENSE`, and `README.md` configured.
-  - No application code or dependencies installed yet (deferred to subsequent phases).
+- **Phase 00 — Foundation**:
+  - **Phase 00.1 — Repository Initialization**: **COMPLETED**
+  - **Phase 00.2 — Documentation Foundation**: **COMPLETED**
+- **Next Phase**: **Phase 01 — Conversion Core** (Engine abstractions, converter registry, workspace sandbox).
 
 ---
 
