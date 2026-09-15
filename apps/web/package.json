@@ -1,0 +1,23 @@
+{
+  "name": "@docforge/web",
+  "version": "0.0.1",
+  "private": true,
+  "description": "React single-page application frontend for DocForge",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@docforge/config": "*",
+    "@docforge/shared": "*",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

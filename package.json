@@ -1,0 +1,32 @@
+{
+  "name": "docforge",
+  "version": "0.0.1",
+  "private": true,
+  "description": "DocForge modular monolith document conversion platform",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test scripts/test-boundaries.mjs",
+    "dev": "echo 'Development servers will be configured in Phase 03 (API) and Phase 04 (Web).'"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.0",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
+  }
+}

@@ -118,12 +118,50 @@ docforge/
 
 ---
 
+## Developer Getting Started
+
+### Prerequisites
+- **Node.js**: `>= 20.0.0` (tested on Node `v22.22.1`)
+- **npm**: `>= 9.0.0` (native npm workspaces)
+
+### Installation
+Clone the repository and install dependencies from the root:
+```bash
+git clone https://github.com/vekariyahetlearner/docforge.git
+cd docforge
+npm install
+```
+
+### Workspace Structure & Boundaries
+DocForge uses native npm workspaces with strict TypeScript project references:
+- **`apps/web`** (`@docforge/web`): React frontend single-page application.
+- **`apps/api`** (`@docforge/api`): Node.js + Express backend service.
+- **`packages/conversion-core`** (`@docforge/conversion-core`): Framework-independent conversion engine.
+- **`packages/shared`** (`@docforge/shared`): Common types, contracts, and constants.
+- **`packages/config`** (`@docforge/config`): Shared configuration constants and compiler presets.
+
+*Boundary Rules*: `packages/conversion-core` remains framework-independent (no Express or web dependencies); `apps/api` does not depend on `apps/web`; `packages/shared` has zero runtime dependencies.
+
+### Monorepo Validation Commands
+
+| Command | Action |
+| :--- | :--- |
+| `npm run typecheck` | Typecheck all packages and apps via TypeScript project references (`tsc -b`) |
+| `npm run build` | Build compiled output and declarations into `dist/` (`tsc -b`) |
+| `npm run lint` | Run ESLint across all TypeScript source files (`eslint .`) |
+| `npm run format` | Format code using Prettier (`prettier --write .`) |
+| `npm run format:check` | Verify code formatting without modifying files (`prettier --check .`) |
+| `npm test` | Run architectural boundary tests via Node test runner (`scripts/test-boundaries.mjs`) |
+
+---
+
 ## Current Project Status
 
-- **Phase 00 — Foundation**:
-  - **Phase 00.1 — Repository Initialization**: **COMPLETED**
-  - **Phase 00.2 — Documentation Foundation**: **COMPLETED**
-- **Next Phase**: **Phase 01 — Conversion Core** (Engine abstractions, converter registry, workspace sandbox).
+- **Current Phase**: **Phase 00 — Foundation**
+  - Repository structure, governance & `.gitignore` established.
+  - Complete documentation foundation merged into `main` (`PRD.md`, `technical-specification.md`, 16 Phase specs, ADRs).
+  - Monorepo tooling operational: npm workspaces, strict TypeScript references, ESLint, Prettier, and boundary tests.
+- **Next Phase**: **Phase 01 — Conversion Core** (Converter interface, registry, and workspace manager).
 
 ---
 
