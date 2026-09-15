@@ -53,9 +53,7 @@ This document records authoritative, durable project facts, established architec
 
 - **Initial MVP Scope**: PowerPoint (`.ppt`, `.pptx`) &rarr; PDF (`.pdf`) single-file conversion.
 - **Current Phase**: **Phase 00 — Foundation**
-  - Subphase 00.1 (Repository Initialization): Completed.
-  - Subphase 00.2 (Documentation Foundation): In progress.
-- **Upcoming Phase**: Phase 01 — Conversion Core.
+- **Upcoming Phase**: **Phase 01 — Conversion Core** (Engine abstractions, converter registry, workspace sandbox).
 
 ---
 
@@ -64,6 +62,7 @@ This document records authoritative, durable project facts, established architec
 | Category | Status | Decision Summary |
 | :--- | :--- | :--- |
 | **Monolith vs. Services** | **Established** | Modular Monolith selected. All components live in one monorepo sharing memory and local execution; no microservices or distributed RPCs. |
+| **Monorepo Tooling** | **Established** | Native npm workspaces with TypeScript project references (`tsc -b`), ESLint flat config, and Prettier (recorded in ADR-001). |
 | **Engine Decoupling** | **Established** | Conversion logic lives strictly in `packages/conversion-core`. Express and React have zero direct knowledge of LibreOffice CLI flags or subprocess logic. |
 | **Converter Contract** | **Established** | All format converters implement `canHandle(input, target)` and `convert(input, context)`. |
 | **Job Model** | **Established** | All conversions operate as tracked jobs (`QUEUED`, `PROCESSING`, `COMPLETED`, `FAILED`, `EXPIRED`). |

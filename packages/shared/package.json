@@ -1,0 +1,13 @@
+{
+  "name": "@docforge/shared",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shared domain types, contracts, and constants for DocForge",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  }
+}
